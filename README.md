@@ -1,1 +1,5 @@
 # Mern-Authentication
+PORT = 3000
+MONGODB_LINK = mongodb+srv://Kishore:Kishore928503@cluster0.avdfxtj.mongodb.net/mern_authentication?retryWrites=true&w=majority&appName=Cluster0
+ACCESS_KEY = 9b48c53636c05f84e221d947b4b6ebe7587b867d7fa9a337ec464b2fc3a50ec059a43f2b0cc761838b20261239e693c76264f8e5cc23b69922dbcb66ddb748eb
+REFRESH_KEY = 7d8a58db5f313a2dc4b754b8fa08ba53bf75f9ca2f4eae61aece02dea34d8c51a6c05d075a663a1cacc3be0c2e5c8400e3841a40842271e3a7a7cc43a762e267
