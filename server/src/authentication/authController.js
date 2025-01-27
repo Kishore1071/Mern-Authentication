@@ -34,7 +34,7 @@ AuthRouter.get('/key/', (request, response) => {
 AuthRouter.post('/login/', async (request, response) => {
 
     const user = await User.findOne({username: request.body.username})
-
+ 
     if (user === null) response.json({
         status: false,
         message: "Invalid Username"
@@ -102,7 +102,7 @@ AuthRouter.post('/token/', async(request, response) => {
         response.json({
             access_token: access_token
         })
-    })
+    })  
 
 })
 

@@ -79,7 +79,7 @@ const Login = ({setValidUser}) => {
                 <input type="button" value="Submit" className='btn btn-primary form-control my-3' onClick={LoginUser} />
 
             </form>
-        </div>
+        </div>   
     )
 
 }
