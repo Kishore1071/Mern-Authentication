@@ -13,9 +13,15 @@ AuthRouter.post('/create/', async (request, response) => {
     if (all_user === null) {
         const new_user = new User(request.body)
         await new_user.save()
-        response.json("User Created")
+        response.json({
+            status: true,
+            message: "User Created"
+        })
     }
-    else response.json("User with the usename already exists!")
+    else response.json({
+        status: false,
+        message: "User with the usename already exists!"
+    })
 })
 
 AuthRouter.get('/key/', (request, response) => {

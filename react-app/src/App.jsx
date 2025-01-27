@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Login from './components/authentication/Login'
 import Home from './components/menus/Home'
 import Navbar from './components/menus/Navbar'
+import Signup from './components/authentication/Signup'
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
 
                 <Route path='/' element={<Login setValidUser={setValidUser}/>}/>
                 <Route path='/home/' element={<Home setValidUser={setValidUser}/>} />
+                <Route path='/create/user/' element={<Signup />} />
 
             </Routes>
             
