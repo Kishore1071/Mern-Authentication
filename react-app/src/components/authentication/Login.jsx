@@ -26,6 +26,19 @@ const Login = ({setValidUser}) => {
                 setErrorMessage(<p className='text-danger fs-5'>{response.data.message + " Try Again!"}</p>)
             }
             else {
+
+                console.log(response.data)
+
+                const Role = user => {
+                    if (user.admin) return 'Admin'
+                    else if (user.manager) return 'Manager'
+                    else if (user.team_leader) return 'Team Leader'
+                    else if (user.employee) return 'Employee'
+                }
+
+                console.log(Role(response.data.user_data))
+
+                localStorage.setItem('role', Role(response.data.user_data))
                 localStorage.setItem('Bearer', response.data.access_token)
                 localStorage.setItem('Refresh', response.data.refresh_token)
                 localStorage.setItem('ValidUser', true)

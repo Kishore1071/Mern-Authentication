@@ -31,6 +31,9 @@ const Navbar = () => {
                             <NavLink className='nav-link' to={'/home/'}>Home</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink className='nav-link' to={'/users/'} >UserList</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink className='nav-link' to={'/create/user/'} >Create-User</NavLink>
                         </li>
                         <li className="nav-item">

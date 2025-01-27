@@ -1,10 +1,17 @@
-import express, { response } from 'express'
+import express from 'express'
 import { User, RefreshToken } from './authModel.js'
 import crypto from 'crypto'
 import jwt from 'jsonwebtoken'
-
+import { authentication } from './authentication.js'
 
 const AuthRouter = express.Router()
+
+AuthRouter.get('/users/', authentication, async (request, response) => {
+
+    const all_users = await User.find({})
+
+    response.json(all_users)
+})
 
 AuthRouter.post('/create/', async (request, response) => {
 
@@ -63,7 +70,7 @@ AuthRouter.post('/login/', async (request, response) => {
                 message: "Valid User",
                 access_token: access_token,
                 refresh_token: refresh_token,
-                user_data: user_data
+                user_data: user
             })
         }
 
